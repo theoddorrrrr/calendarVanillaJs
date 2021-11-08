@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, right bottom, from(#329ca479), to(#4a85e380));
+  background: linear-gradient(to bottom right, #329ca479, #4a85e380);
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 30px;
+}
+
+.calendar {
+  width: 45rem;
+  height: 52rem;
+  background: -webkit-gradient(linear, left top, right bottom, from(#4A84E3), to(#329DA4));
+  background: linear-gradient(to bottom right, #4A84E3, #329DA4);
+  overflow: hidden;
+  -webkit-box-shadow: 0 2px 20px #4A84E3;
+          box-shadow: 0 2px 20px #4A84E3;
+}
+
+.month {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 2em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 12rem;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.month i {
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.month .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.month .date h1 {
+  font-size: 1.3em;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.month .date h2 {
+  font-size: 1em;
+  margin-bottom: 0.5em;
+}
+
+.month .date p {
+  border: 1px solid #36538262;
+  padding: 5px 5px 0px 5px;
+  background-color: #36538262;
+  color: #bbcce9;
+  border-radius: 10px 0px 10px 0px;
+  -webkit-box-shadow: 0px 2px 20px #4A84E3;
+          box-shadow: 0px 2px 20px #4A84E3;
+}
+
+.weekdays {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 6rem;
+  padding: 0 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.145);
+}
+
+.weekdays div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.4rem;
+  width: calc(44.2rem/7);
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+@media (any-hover: hover) {
+  .weekdays div:hover {
+    color: black;
+    cursor: pointer;
+  }
+}
+
+.days {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0.2rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.days__wrapper {
+  overflow: hidden;
+}
+
+.days div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  width: calc(40.2rem/7);
+  height: 5rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media (any-hover: hover) {
+  .days div:hover {
+    background-color: #4a85e362;
+    border: 1px solid white;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 2px 20px #718dbf;
+            box-shadow: 0px 2px 20px #718dbf;
+  }
+}
+
+.prev-date,
+.next-date {
+  opacity: 0.3;
+}
+
+.today {
+  background: #36538262;
+}
+
+._fade {
+  opacity: 0;
+}
+
+._prev {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+._next {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
